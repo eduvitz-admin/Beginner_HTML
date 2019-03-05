@@ -1,0 +1,130 @@
+In the first part of this series on how to build a web site, you learned how to:
+Develop a purpose for your site
+Organize a project outline
+Draw a wireframe
+Organize your folder structure
+Define HTML and JavaScript
+Now that you know how to define the purpose of your site, create a project outline and create a file folder structure, 
+it's time to move on. In this tutorial, you will learn about HTML editors, HTML tags, CSS, and how to create your first 
+web page using the infamous "Hello World" programming example.
+HTML 4 is still considered the basic building blocks of a web site. HTML 5 is the proposed next standard, but according 
+to the HTML 5 Wikipedia page, the W3C is not expected to recommend it until 2022. However, some aspects are considered 
+stable and some implementations can be used today. For the purpose of this article, HTML 4 will be considered the gold 
+standard.
+
+Get an HTML Editor
+Now you're ready to dive into HTML and CSS. For the CSS file, all you need is a plain text editor, such as Notepad. For 
+the HTML, you will most likely want an HTML editor, such as the Chami HTML-Kit, which is used in the examples in this 
+article.
+Here's an entire list of HTML editors that you can choose from. The better HTML editors provide a built-in browser window, 
+which allows you to preview your work. Also, you might want an HTML editor that has a validator. That way, the editor can help 
+find mistakes. It's kind of like using spell checker in a word processor. However, just like spell check does not catch all 
+mistakes, neither will a validator. Your best chance of success is to develop the eye-of-a-hawk and catch your own typos and 
+mistakes. Writers and editors pay close attention to detail and this skill is equally important to web developers. If you miss 
+even one closing tag, your entire page could be affected. Don't let this scare you. As long as you pay attention to what you're 
+doing, you'll be fine. The best rule of thumb is to type slowly, check your work as you go, and constantly test.
+
+As you search the Internet looking for an HTML editor, you might run across some sites or services that promise you the ability 
+to build a web site in minutes using their professionally designed templates. You might be tempted to use these pre-built 
+templates. If you do so though, are you truly a web site developer, or are you simply skipping steps to reach an end-goal? 
+You might want to ask yourself what your true end-goal is…do you want to be a web developer or do you want to simply fill 
+in the blanks? If you're filling in the blanks of a pre-built template, then you run the risk of creating a site that looks 
+and behaves exactly like someone else's. If you do this, you're not building marketable skills that you can sell to a hiring 
+manager to become a web developer. It's best to take the long road and write the code yourself.
+
+Defining an HTML Page
+When you start a new HTML page in Chami's HTML-Kit, you'll see some code has been populated for you. This isn't cheating and 
+this isn't filling in the blanks. The software is simply saving you some typing and providing you a head start. This is what 
+you'll see:
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>Untitled</title>
+</head>
+<body>
+</body>
+</html>
+The first thing you should notice are the tags. An HTML tag defines what you want to accomplish: whether that's to create a link, 
+insert an image, or simply place some text on the page. Each tag has an opening tag and a closing tag; the keywords within each 
+tag are enclosed by angle brackets (< and >). If your tag is missing an angled bracket, then the whole tag is rendered ineffective. 
+It's very important to remember each < and > and that each opening tag, for example, <head> needs a closing tag </head>. Notice that 
+the difference in the closing tag is /.
+
+The first line on the page is the document type declaration and tells a validator which version of HTML to use in checking 
+the document's syntax. You'll notice that this declaration is telling the validator your site uses HTML 4. You'll also see 
+the word, "public" in there. That means your site is available to the public. The W3C is the group that owns and maintains 
+the DOCTYPE. DTD is the type of DOCTYPE that is being used.
+
+Transitional means that humans will be reading your site as compared to a computer-read site. And finally, EN represents 
+English, which means the DTD is written in English. It does not represent the language of the content on the page. You do 
+not need to alter the declaration type, but you should be aware that other versions do exist.
+
+<html> -- This is the first HTML tag on the page. At the very end of the page is the closing </html> tag. 
+All of your content will appear between the <html> tags.
+
+<head> -- This is the second HTML tag on the page. Within the <head> is where you place the <title> of your page. 
+The <title> of your page appears when someone prints your web page on paper and it also appears in the border of a 
+web browser (which all depends on your browser and the settings).
+
+For Internet Explorer 8, the title of the web page appears in the very top border above the address bar. To change 
+the title of your page, simply replace "untitled" with your title. There's no need to alter the <title> tag. Also 
+within the <head> tag is where you place your styles. Since you'll be using CSS while following this series of articles, 
+this is where you'll place a reference to your CSS file(s). You'll also place references to your script files if you 
+use some advanced JavaScript in your web site.
+
+<body> -- Within the <body> is where you'll do the majority of your coding. This is where you place your content, 
+including text, images and links and other functionality you might want, like image galleries, video, etc.
+
+Hello World
+Right now, you might be craving some instant gratification. It's time to get to it! Before digging into the CSS, 
+let's build up some confidence and create some actual content that you can view in a browser.
+
+Immediately after the <body> tag, type:
+
+<h1>Hello World, this is my first HTML</h1>
+Click the Preview button. In HTML-Kit, that's located in the bottom menu, just to the right of Editor. You'll see 
+your text in large, Times New Roman font. You can also save your file, go to your folder structure, find the .htm 
+file and click it to open it in your browser. You'll see essentially the same thing. You might be thinking to 
+yourself, "Gee, that large, Times New Roman font doesn't look very good." You can fix that by adding some style and 
+creating a CSS.
+Starting the CSS
+CSS stands for Cascading Style Sheets and you create this file in a text editor such as Notepad. CSS allows you to 
+define styles and page layout in one location so that you can globally apply them to your .htm files. If you ever 
+change your mind on style, you can change it once in your CSS file and it automatically updates all of your .htm files. 
+This can save a lot of time and energy down the line.
+
+Let's start by adding some style to the <h1> tag you created in the Hello World example. Simply type,
+
+H1 {text-align:left; color:black; font: normal 40pt "Arial Black"}
+
+You have now defined the style for your <h1> tag. <H1> describes the tag that you want to define. You start 
+with a { and end the definition with }. This is the equivalent to the angled brackets in HTML.
+
+Text-align - this defines the alignment of the text. You can have left-aligned, right-aligned or centered.
+
+Color - is exactly what it sounds like, you can change the color of your font. You can use words, such as Black, 
+Gray, Green, etc. You can also use hex numbers.
+
+Font - this is where you assign the size and type of font (http://en.wikipedia.org/wiki/HTML_fonts)
+
+Notice that after each attribute, you need to use a ; to separate the different parts.
+
+Now that you have at least one style defined, it's time to connect this CSS to the .htm file. Save the file with 
+a .css extension in your CSS folder. For example, HelloWorld.css
+
+Open your .htm file and in within the <head> tag, preferably under the <title> tag, type:
+
+<link rel=stylesheet type="text/css" href="css/Helloworld.css">
+This connects your CSS file to your .htm file. You need to add this tag to each and every .htm file that you create.
+Your HTML should now look similar to this:
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>Hello World</title>
+<link rel=stylesheet type="text/css" href="css/Helloworld.css">
+</head>
+<body>
+<h1>Hello World, this is my first HTML</h1>
+</body>
+</html>
